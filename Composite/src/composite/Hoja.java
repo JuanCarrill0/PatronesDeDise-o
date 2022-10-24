@@ -16,12 +16,10 @@ public class Hoja extends Componente{
 
     @Override
     public void agregar(Componente c) {
-        System.out.println("Se está agregando una hoja");
     }
 
     @Override
     public void eliminar(Componente c) {
-        System.out.println("Se eliminó una hoja");
     }
 
     @Override

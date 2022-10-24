@@ -20,7 +20,6 @@ public class Carpeta extends Componente {
     @Override
     public void agregar(Componente componente) {
         hijo.add(componente);
-        componente.agregar(componente);
     }
 
     @Override
