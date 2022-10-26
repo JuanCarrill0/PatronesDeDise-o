@@ -36,6 +36,8 @@ public class Service_TM {
         boolean validacion = false;
         if(Tarjetas.size()-1 >= tarjeta){
             validacion = true;
+        }else{
+            System.out.println("La tarjeta no existe o no está disponible");
         }
         return validacion;
     }
@@ -54,9 +56,7 @@ public class Service_TM {
             System.out.println("¿Con que saldo desea recargar?");
             int saldo = sc.nextInt();
             Tarjetas.get(tarjeta).recargarSaldo(saldo);  
-        }else{
-            System.out.println("Tarjeta no existe o no disponible");
-        }    
+        }   
     }
     
     public void cambiarTarjeta(){
@@ -79,6 +79,11 @@ public class Service_TM {
                              Card tarjetaPlus = new Plus_Card(Tarjetas.get(tarjeta));
                              Tarjetas.add(tarjeta, tarjetaPlus);
                              Tarjetas.remove(tarjeta+1);
+                             break;
+                            }
+                    default:
+                            {
+                             System.out.println("Opcion no valida");
                              break;
                             }
                 }
